@@ -412,7 +412,7 @@ const sanitizeColor = (hex) => {
     return /^[0-9a-fA-F]{6}$/.test(h) ? parseInt(h, 16) : null;
 };
 
-const buildListEmbed = (block, colorHex) => {
+const buildListEmbed = (block, colorHex, imageUrl) => {
     const stepEmojis = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"];
     const lines = block.questions
         .map((q, i) => `${stepEmojis[i] || "➡️"} ${q}`)
@@ -421,9 +421,10 @@ const buildListEmbed = (block, colorHex) => {
     const embed = new EmbedBuilder()
         .setTitle(block.title)
         .setDescription(`${block.intro}\n\n${lines}`)
+        .setColor(colorHex || 0xFFD700)
         .setTimestamp();
 
-    if (colorHex) embed.setColor(colorHex);
+    if (imageUrl) embed.setImage(imageUrl);
     return embed;
 };
 
@@ -650,9 +651,10 @@ client.on('interactionCreate', async (interaction) => {
                 const salon = interaction.options.getChannel('salon') || interaction.channel;
                 const ephemere = interaction.options.getBoolean('ephemere') ?? false;
                 const color = sanitizeColor(interaction.options.getString('couleur'));
+                const imageUrl = 'https://cdn.discordapp.com/attachments/1290178652327252009/1438572983450075288/image.png?ex=69175efe&is=69160d7e&hm=74f1e319feae0101cdb9270121240e32efe8909c7b5e56a5b20e6125158902ce&';
 
                 const payload = {
-                    embeds: [buildListEmbed(INSCRIPTION, color)],
+                    embeds: [buildListEmbed(INSCRIPTION, color, imageUrl)],
                     components: buildNumberedRows(INSCRIPTION, 'insc'),
                 };
 
