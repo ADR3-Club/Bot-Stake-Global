@@ -534,7 +534,7 @@ client.on('interactionCreate', async (interaction) => {
                 const embed = new EmbedBuilder()
                     .setTitle('📜 Règlement du Club')
                     .setDescription('Bienvenue dans le Club !\nPour un environnement agréable et respectueux, merci de suivre ces règles 👇\n\u200B')
-                    .setColor(0x5865F2)
+                    .setColor(0xFFD700)
                     .addFields(
                         {
                             name: '✅ Respect et bienveillance',
