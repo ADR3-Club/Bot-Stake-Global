@@ -74,9 +74,9 @@ const AFFILIATION = {
         'Tout savoir sur l\'affiliation au Club\n\n' +
         'Clique sur les **boutons numérotés** pour lire les réponses :',
     questions: [
-        'Je n'ai pas encore de compte Stake, comment m'affilier à ADR3 ?',
+        'Je n\'ai pas encore de compte Stake, comment m\'affilier à ADR3 ?',
         'Y a-t-il des bonus disponibles ?',
-        'J'ai déjà un compte, puis-je rejoindre le Club ?',
+        'J\'ai déjà un compte, puis-je rejoindre le Club ?',
     ],
     answers: [
         '👉 Inscris toi sur Stake <#1409916078007779429>\n\n' +
