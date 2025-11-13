@@ -587,7 +587,7 @@ client.on('interactionCreate', async (interaction) => {
                             inline: false
                         }
                     )
-                    .setImage('https://cdn.discordapp.com/attachments/1407614780356825109/1438521277324202166/image.png?ex=69172ed6&is=6915dd56&hm=699040c425ffeea5c59d8320d233add08dbcf0f4271f073538d0fa562fff5352&')
+                    .setImage('https://cdn.discordapp.com/attachments/1290178652327252009/1413076171691917382/Banniere_Reglement.png?ex=6916e63d&is=691594bd&hm=48f1593e0c72fc28af87e7bf47cc15757ffbadba0f62d1d0c8f5b49debdb02d4&')
                     .setFooter({ text: 'Merci de votre compréhension et de votre coopération. Amusez-vous et profitez de votre temps ici !' });
 
                 await interaction.reply({ content: '✅ Règlement posté !', flags: MessageFlags.Ephemeral });
