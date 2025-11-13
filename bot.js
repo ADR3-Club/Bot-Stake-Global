@@ -533,52 +533,53 @@ client.on('interactionCreate', async (interaction) => {
             if (interaction.commandName === 'reglement') {
                 const embed = new EmbedBuilder()
                     .setTitle('📜 Règlement du Club')
-                    .setDescription('Bienvenue dans le Club !\nPour un environnement agréable et respectueux, merci de suivre ces règles 👇')
+                    .setDescription('Bienvenue dans le Club !\nPour un environnement agréable et respectueux, merci de suivre ces règles 👇\n\u200B')
                     .setColor(0x5865F2)
+                    .setThumbnail('https://cdn.discordapp.com/attachments/1407614780356825109/1438521277324202166/image.png')
                     .addFields(
                         {
                             name: '✅ Respect et bienveillance',
-                            value: '• Traitez chaque membre avec respect. Les propos offensants, discriminatoires ou harcelants ne seront pas tolérés.',
+                            value: '• Traitez chaque membre avec respect. Les propos offensants, discriminatoires ou harcelants ne seront pas tolérés.\n\u200B',
                             inline: false
                         },
                         {
                             name: '🚫 Mineurs strictement interdits',
-                            value: 'Ban immédiat sans avertissement',
+                            value: 'Ban immédiat sans avertissement\n\u200B',
                             inline: false
                         },
                         {
                             name: '💰 Transactions financières',
-                            value: '• Aucune transaction d\'argent (crypto, PayPal, etc.)\n• Ni en salon public, ni en message privé',
+                            value: '• Aucune transaction d\'argent (crypto, PayPal, etc.)\n• Ni en salon public, ni en message privé\n\u200B',
                             inline: false
                         },
                         {
                             name: '📛 Pas de spam',
-                            value: '• Évitez de spammer les messages, les liens ou les publicités.',
+                            value: '• Évitez de spammer les messages, les liens ou les publicités.\n\u200B',
                             inline: false
                         },
                         {
                             name: '🔒 Confidentialité',
-                            value: '• Ne partagez pas d\'informations personnelles sans consentement.',
+                            value: '• Ne partagez pas d\'informations personnelles sans consentement.\n\u200B',
                             inline: false
                         },
                         {
                             name: '💬 Langage et comportement',
-                            value: '• Utilisez un langage approprié. Les insultes et les menaces sont interdites.',
+                            value: '• Utilisez un langage approprié. Les insultes et les menaces sont interdites.\n\u200B',
                             inline: false
                         },
                         {
                             name: '⚠️ Sujets sensibles',
-                            value: '• Évitez politiques/religion sauf autorisation expresse des modérateurs.',
+                            value: '• Évitez politiques/religion sauf autorisation expresse des modérateurs.\n\u200B',
                             inline: false
                         },
                         {
                             name: '📌 Règles des salons',
-                            value: '• Lisez les annonces & épingles pour les règles spécifiques.',
+                            value: '• Lisez les annonces & épingles pour les règles spécifiques.\n\u200B',
                             inline: false
                         },
                         {
                             name: '✉️ Sanctions',
-                            value: '• Le non-respect peut entraîner avertissements, expulsions temporaires ou permanentes.',
+                            value: '• Le non-respect peut entraîner avertissements, expulsions temporaires ou permanentes.\n\u200B',
                             inline: false
                         },
                         {
@@ -587,7 +588,6 @@ client.on('interactionCreate', async (interaction) => {
                             inline: false
                         }
                     )
-                    .setImage('https://cdn.discordapp.com/attachments/1407614780356825109/1438521277324202166/image.png?ex=69172ed6&is=6915dd56&hm=699040c425ffeea5c59d8320d233add08dbcf0f4271f073538d0fa562fff5352&')
                     .setFooter({ text: 'Merci de votre compréhension et de votre coopération. Amusez-vous et profitez de votre temps ici !' });
 
                 await interaction.reply({ content: '✅ Règlement posté !', flags: MessageFlags.Ephemeral });
