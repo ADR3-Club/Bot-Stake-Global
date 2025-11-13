@@ -71,7 +71,7 @@ const INSCRIPTION = {
 const AFFILIATION = {
     title: '🤝 Affiliation du Club',
     intro:
-        'Tout savoir sur l'affiliation au Club\n\n' +
+        'Tout savoir sur l\'affiliation au Club\n\n' +
         'Clique sur les **boutons numérotés** pour lire les réponses :',
     questions: [
         'Je n'ai pas encore de compte Stake, comment m'affilier à ADR3 ?',
