@@ -532,37 +532,63 @@ client.on('interactionCreate', async (interaction) => {
             // Commande /reglement
             if (interaction.commandName === 'reglement') {
                 const embed = new EmbedBuilder()
-                    .setTitle('🎮 LES RÈGLES DU SERV')
-                    .setDescription('Yo ! Bienvenue chez nous. On est chill mais y\'a quand même quelques trucs à respecter :')
-                    .setColor(0x9B59B6)
+                    .setTitle('📜 Règlement du Club')
+                    .setDescription('Bienvenue dans le Club !\nPour un environnement agréable et respectueux, merci de suivre ces règles 👇')
+                    .setColor(0x5865F2)
                     .addFields(
                         {
-                            name: '🚫 Pas de BEG',
-                            value: 'On partage si on veut, demande pas à tout le monde. Tu cherches des ressources ? Demande gentiment, une fois.',
+                            name: '✅ Respect et bienveillance',
+                            value: '• Traitez chaque membre avec respect. Les propos offensants, discriminatoires ou harcelants ne seront pas tolérés.',
                             inline: false
                         },
                         {
-                            name: '🛡️ Pas de SCAM',
-                            value: 'Arnaques, liens douteux, fausses promesses... On veut pas de ça ici. Respect.',
+                            name: '🚫 Mineurs strictement interdits',
+                            value: 'Ban immédiat sans avertissement',
                             inline: false
                         },
                         {
-                            name: '😎 Full CHILL',
-                            value: 'On est là pour passer du bon temps. Pas de drama, pas de prise de tête. On reste zen.',
+                            name: '💰 Transactions financières',
+                            value: '• Aucune transaction d\'argent (crypto, PayPal, etc.)\n• Ni en salon public, ni en message privé',
                             inline: false
                         },
                         {
-                            name: '🎯 ON EST ADULTES',
-                            value: 'On sait se gérer, on a pas besoin d\'une grosse modération. Tu connais les limites, on compte sur toi.',
+                            name: '📛 Pas de spam',
+                            value: '• Évitez de spammer les messages, les liens ou les publicités.',
                             inline: false
                         },
                         {
-                            name: '✨ C\'EST TOUT !',
-                            value: `Simple non ? Si t'es ok avec ça, clique sur ${config.emoji} pour accéder au serveur !`,
+                            name: '🔒 Confidentialité',
+                            value: '• Ne partagez pas d\'informations personnelles sans consentement.',
+                            inline: false
+                        },
+                        {
+                            name: '💬 Langage et comportement',
+                            value: '• Utilisez un langage approprié. Les insultes et les menaces sont interdites.',
+                            inline: false
+                        },
+                        {
+                            name: '⚠️ Sujets sensibles',
+                            value: '• Évitez politiques/religion sauf autorisation expresse des modérateurs.',
+                            inline: false
+                        },
+                        {
+                            name: '📌 Règles des salons',
+                            value: '• Lisez les annonces & épingles pour les règles spécifiques.',
+                            inline: false
+                        },
+                        {
+                            name: '✉️ Sanctions',
+                            value: '• Le non-respect peut entraîner avertissements, expulsions temporaires ou permanentes.',
+                            inline: false
+                        },
+                        {
+                            name: '💡 Suggestions et feedback',
+                            value: '• Vos retours sont précieux !',
                             inline: false
                         }
                     )
-                    .setFooter({ text: 'Bienvenue dans la communauté ✌️' });
+                    .setImage('https://cdn.discordapp.com/attachments/1407614780356825109/1438521277324202166/image.png?ex=69172ed6&is=6915dd56&hm=699040c425ffeea5c59d8320d233add08dbcf0f4271f073538d0fa562fff5352&')
+                    .setFooter({ text: 'Merci de votre compréhension et de votre coopération. Amusez-vous et profitez de votre temps ici !' });
 
                 await interaction.reply({ content: '✅ Règlement posté !', flags: MessageFlags.Ephemeral });
                 const ruleMessage = await interaction.channel.send({ embeds: [embed] });
