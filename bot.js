@@ -668,9 +668,10 @@ client.on('interactionCreate', async (interaction) => {
                 const salon = interaction.options.getChannel('salon') || interaction.channel;
                 const ephemere = interaction.options.getBoolean('ephemere') ?? false;
                 const color = sanitizeColor(interaction.options.getString('couleur'));
+                const imageUrl = 'https://cdn.discordapp.com/attachments/1290178652327252009/1438574227367133276/Banniere_Affiliation.png?ex=69176027&is=69160ea7&hm=5ccf99bfbb99892bb66289b57aed846a0f9cc40cb43f388d31449c4ce3054022&';
 
                 const payload = {
-                    embeds: [buildListEmbed(AFFILIATION, color)],
+                    embeds: [buildListEmbed(AFFILIATION, color, imageUrl)],
                     components: buildNumberedRows(AFFILIATION, 'aff'),
                 };
 
