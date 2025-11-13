@@ -1,0 +1,27 @@
+{
+  "name": "bot-stake-global",
+  "version": "1.0.0",
+  "description": "Bot Discord global pour la communauté Stake - Règlement, Inscription, Affiliation et Sondages",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "node bot.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "stake",
+    "poll",
+    "rules",
+    "affiliation"
+  ],
+  "author": "ADR3N4LYN3",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  }
+}
